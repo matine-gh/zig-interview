@@ -4,7 +4,7 @@ export interface FeedsInterface {
 }
 
 export interface StoriesInterface {
-    id: number;
+    id: string;
     image: string
 }
 export interface PostsInterface {

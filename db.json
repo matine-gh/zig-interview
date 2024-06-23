@@ -2,24 +2,36 @@
   "feeds": {
     "stories": [
       {
-        "id": 1,
-        "image": "https://www.vecteezy.com/vector-art/9749751-avatar-man-icon-cartoon-male-profile-mascot-vector-illustration-head-face-business-user-logo"
+        "id": "Lorem",
+        "image": "https://www.w3schools.com/howto/img_avatar.png"
       },
       {
-        "id": 2,
-        "image": "https://www.vecteezy.com/vector-art/6487912-hacker-avatar-vector-ilustration"
+        "id": "ipsum",
+        "image": "https://www.w3schools.com/howto/img_avatar2.png"
       },
       {
-        "id": 3,
+        "id": "dolor",
+        "image": "https://media.istockphoto.com/id/1171546024/vector/spy-secret-agent-flat-vector-concept-illustration.webp?s=2048x2048&w=is&k=20&c=9wyHkGvwzy9CVbrS_wBYF3f94eqvQDhomP4f283wQzw="
+      },
+      {
+        "id": "sit",
         "image": ""
       },
       {
-        "id": 4,
+        "id": "amet",
+        "image": "https://www.w3schools.com/w3images/avatar5.png"
+      },
+      {
+        "id": "dolor",
         "image": ""
       },
       {
-        "id": 5,
-        "image": ""
+        "id": "sit",
+        "image": "https://www.w3schools.com/w3images/avatar6.png"
+      },
+      {
+        "id": "amet",
+        "image": "https://www.w3schools.com/w3images/avatar2.png"
       }
     ],
     "posts": [

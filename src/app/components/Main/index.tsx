@@ -1,11 +1,29 @@
 'use client'
 import "../../globals.css";
+import StoryList from "@/app/components/StoryList";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect, useState} from "react";
+import {getFeedsLoading} from "@/store/Feeds/action";
+import {StoriesInterface} from "@/store/Feeds/interface";
 
 export default function Main() {
 
+    const [storyList, setStoryList] = useState<StoriesInterface>()
+    const dispatch = useDispatch();
+    const feedsStates = useSelector((state: any)=>state.feeds.response);
+
+    useEffect(() => {
+        dispatch(getFeedsLoading());
+    }, []);
+
+    useEffect(() => {
+        console.log('feedsStates', feedsStates)
+        setStoryList(feedsStates.stories)
+    }, [feedsStates]);
+
     return (
-        <div className={'flex-1 bg-pink-400'}>
-            main
+        <div className={'flex-1'}>
+            <StoryList storyList={storyList}/>
         </div>
     )
 }
