@@ -2,8 +2,10 @@ import {StoriesInterface} from "@/store/Feeds/interface";
 import Avatar from '@mui/material/Avatar';
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import Badge from "@mui/material/Badge";
+import * as React from "react";
 
-export default function Story({image, id}: StoriesInterface) {
+export default function Story({image, id, addStory}: StoriesInterface) {
+
     return (
         <div className={'flex-1'}>
             <>
@@ -13,7 +15,9 @@ export default function Story({image, id}: StoriesInterface) {
                         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                         badgeContent={
                             <AddCircleRoundedIcon color={'primary'} />
-                        } className={'p-1'}>
+                        }
+                        onClick={addStory}
+                        className={'p-1'}>
                         <Avatar  color="primary" variant="outlined" alt={id} src={image} className={'m-auto'} sx={{ width: 56, height: 56 }}/>
                     </Badge>
                     :<div className={'bg-gradient-to-r from-cyan-200 to-blue-500 p-1 rounded-full'}>

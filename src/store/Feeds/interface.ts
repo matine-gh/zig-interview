@@ -5,7 +5,8 @@ export interface FeedsInterface {
 
 export interface StoriesInterface {
     id: string;
-    image: string
+    image: string;
+    addStory: () => void
 }
 export interface PostsInterface {
     id: number;
