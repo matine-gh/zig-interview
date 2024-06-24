@@ -6,8 +6,12 @@ import ShowChartOutlinedIcon from '@mui/icons-material/ShowChartOutlined';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import {useState} from "react";
+import Image from "next/image";
 
 export default function Post({post}: PostsInterface) {
+
+    const [liked, setLiked] = useState<boolean>(false)
     return (
         <div className={'bg-white rounded-lg my-8 p-4 flex'}>
             <Avatar alt={post.user.username} src={post.user.avatar} className={''} sx={{ width: 36, height: 36 }}/>
@@ -22,11 +26,11 @@ export default function Post({post}: PostsInterface) {
                     </div>
                 </div>
                 <p className={'text-sm'}>{post.desc}</p>
-                <img alt={'chart'} src={post.image} className={'w-full'}/>
+                <Image alt={'chart'} src={post.image} className={'w-full'} width={'200'} height={'200'}/>
                 <div className={'flex justify-between gap-5 text-xs'}>
-                    <div>
-                        <ShowChartOutlinedIcon sx={{ color: '#ADADAD' }} fontSize="small" />
-                        <span className='text-secondary'>{post.impression.like}</span>
+                    <div onClick={()=>setLiked(!liked)}>
+                        <ShowChartOutlinedIcon sx={{ color: liked? '#00C400':'#ADADAD', padding: 0 }} fontSize="small" />
+                        <span className={`${liked? 'text-success': 'text-secondary'} text-xs`}>{post.impression.like + liked}</span>
                     </div>
                     <div>
                         <MessageOutlinedIcon sx={{ color: '#ADADAD' }} fontSize="small"/>

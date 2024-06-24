@@ -24,6 +24,9 @@ const config: Config = {
           DEFAULT: '#ADADAD',
           'dark': '#000000'
         },
+        success: {
+          DEFAULT: '#00C400',
+        },
       }
     },
   },
