@@ -19,6 +19,11 @@ const config: Config = {
           DEFAULT: '#00A3E6',
           'dark': '#255FFF'
         },
+        secondary: {
+          'light': '#ffffff',
+          DEFAULT: '#d4d4d8',
+          'dark': '#000000'
+        },
       }
     },
   },
