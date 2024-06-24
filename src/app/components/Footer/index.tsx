@@ -9,7 +9,7 @@ import {IconButton} from "@mui/material";
 import {FooterItemInterface} from "@/app/components/Footer/footer.interface";
 import ScoreOutlinedIcon from '@mui/icons-material/ScoreOutlined';
 import ScoreIcon from '@mui/icons-material/ScoreOutlined';
-
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import {usePathname} from "next/navigation";
 export default function Footer() {
     const pathname = usePathname();
@@ -38,15 +38,20 @@ export default function Footer() {
     ]
 
     return (
-        <div className={'fixed bottom-0 w-full bg-inherit backdrop-opacity-10 flex justify-between py-3 px-5'}>
-            {items.map(item => (
-                <IconButton key={item.path} href={item.path}>
-                    {pathname === item.path ?
-                        item.selectedIcon
-                        :item.defaultIcon
-                    }
-                </IconButton>
-            ))}
-        </div>
+        <>
+            <div className={'fixed bottom-20 right-2'}>
+                <AddCircleOutlinedIcon sx={{ fontSize: 60, color: '#255FFF' }} />
+            </div>
+            <div className={'fixed bottom-0 w-full bg-inherit backdrop-blur flex justify-between py-3 px-5'}>
+                {items.map(item => (
+                    <IconButton key={item.path} href={item.path}>
+                        {pathname === item.path ?
+                            item.selectedIcon
+                            :item.defaultIcon
+                        }
+                    </IconButton>
+                ))}
+            </div>
+        </>
     )
 }
