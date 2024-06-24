@@ -20,8 +20,8 @@ const config: Config = {
           'dark': '#255FFF'
         },
         secondary: {
-          'light': '#ffffff',
-          DEFAULT: '#d4d4d8',
+          'light': '#d4d4d8',
+          DEFAULT: '#ADADAD',
           'dark': '#000000'
         },
       }

@@ -5,12 +5,14 @@ import StoryList from "@/app/components/StoryList";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {getFeedsLoading} from "@/store/Feeds/action";
-import {StoriesInterface} from "@/store/Feeds/interface";
+import {PostsInterface, StoriesInterface} from "@/store/Feeds/interface";
 import TabBar from "@/app/components/TabBar";
+import PostList from "@/app/components/PostList";
 
 export default function Main() {
 
-    const [storyList, setStoryList] = useState<StoriesInterface>()
+    const [storyList, setStoryList] = useState<StoriesInterface>();
+    const [postList, setPostList] = useState<PostsInterface>();
 
     const dispatch = useDispatch();
     const feedsStates = useSelector((state: any)=>state.feeds.response);
@@ -20,14 +22,21 @@ export default function Main() {
     }, []);
 
     useEffect(() => {
-        console.log('feedsStates', feedsStates)
         setStoryList(feedsStates.stories)
-    }, [feedsStates]);
+    }, [feedsStates.stories]);
+
+    useEffect(() => {
+        if (feedsStates.posts){
+            setPostList(feedsStates.posts)
+        }
+    }, [feedsStates.posts]);
 
     return (
         <div className={'flex-1'}>
             <StoryList storyList={storyList}/>
-            <TabBar />
+            <TabBar>
+                {postList && <PostList postList={postList}/>}
+            </TabBar>
         </div>
     )
 }

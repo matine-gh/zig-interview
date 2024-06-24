@@ -6,7 +6,7 @@ import Tab from '@mui/material/Tab';
 import TabPanel from "@/app/components/TabPanel";
 import CardSlider from "@/app/components/CardSlider";
 
-export default function TabBar() {
+export default function TabBar({children}: { children: React.ReactNode }) {
 
     const [value, setValue] = React.useState(0);
 
@@ -15,7 +15,7 @@ export default function TabBar() {
     };
 
     return (
-        <div className={'bg-secondary w-full h-full'}>
+        <div className={'bg-secondary-light w-full h-full'}>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <Tabs value={value}
                       onChange={handleChange} centered
@@ -28,6 +28,7 @@ export default function TabBar() {
 
             <TabPanel value={value} index={0} >
                 <CardSlider />
+                {children}
             </TabPanel>
             <TabPanel value={value} index={1}>
                 Item Two

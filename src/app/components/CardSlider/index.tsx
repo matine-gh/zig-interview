@@ -47,11 +47,11 @@ export default function CardSlider() {
     return (
         <div className={'flex overflow-x-scroll gap-4'}>
             {cards.map(card => (
-                <div key={card.cryptoSymbol} className={'bg-secondary-light flex flex-1 items-center gap-2 rounded-lg p-3'}>
+                <div key={card.cryptoSymbol} className={'bg-white flex flex-1 items-center gap-2 rounded-lg p-3'}>
                     {card.logo}
                     <div>
                         <p className={'font-bold'}>{card.cryptoSymbol}</p>
-                        <p className={'text-secondary text-xs'}>{card.cryptoName}</p>
+                        <p className={'text-secondary-light text-xs'}>{card.cryptoName}</p>
                     </div>
                     <Box
                         component="img"
@@ -66,7 +66,7 @@ export default function CardSlider() {
                     />
                     <div>
                         <p className={'font-bold'}>{card.amount}</p>
-                        <p className={'text-secondary text-xs'}>{card.percent}</p>
+                        <p className={'text-secondary-light text-xs'}>{card.percent}</p>
                     </div>
                 </div>
             ))}
