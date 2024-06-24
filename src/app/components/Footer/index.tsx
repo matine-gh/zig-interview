@@ -23,22 +23,22 @@ export default function Footer() {
         {
             path: '/',
             defaultIcon: <HomeOutlinedIcon />,
-            selectedIcon: <HomeIcon />
+            selectedIcon: <HomeIcon color={"primary"}/>
         },
         {
             path: '/explore',
             defaultIcon: <SearchOutlined/>,
-            selectedIcon: <SearchIcon />
+            selectedIcon: <SearchIcon  color={"primary"}/>
         },
         {
             path: '/score',
             defaultIcon: <ScoreOutlinedIcon />,
-            selectedIcon: <ScoreIcon />
+            selectedIcon: <ScoreIcon  color={"primary"}/>
         },
         {
             path: '/profile',
             defaultIcon: <AccountCircleOutlinedIcon />,
-            selectedIcon: <AccountCircleIcon />
+            selectedIcon: <AccountCircleIcon  color={"primary"}/>
         }
     ];
 
