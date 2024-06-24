@@ -37,7 +37,7 @@ export default function Header({setIsSidebarOpen}: HeaderInterface) {
     }));
 
     return (
-        <div className={'flex justify-between gap-3 px-5 py-4'}>
+        <div className={'flex justify-between items-center gap-3 px-5 py-4'}>
             <MenuOutlinedIcon onClick={()=> setIsSidebarOpen(true)}/>
             <h1 className={'flex-1 text-primary-dark text-lg font-black'}>CryptoGap</h1>
             <IconButton href={'/notification'}>
@@ -45,7 +45,7 @@ export default function Header({setIsSidebarOpen}: HeaderInterface) {
                     overlap="circular"
                     anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
                     variant="dot">
-                    <NotificationsNoneOutlinedIcon />
+                    <NotificationsNoneOutlinedIcon sx={{color: '#000000'}}/>
                 </StyledBadge>
             </IconButton>
             <a href={'/direct'}><InboxOutlinedIcon /></a>
