@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import TabPanel from "@/app/components/TabPanel";
+import CardSlider from "@/app/components/CardSlider";
 
 export default function TabBar() {
 
@@ -14,7 +15,7 @@ export default function TabBar() {
     };
 
     return (
-        <>
+        <div className={'bg-secondary w-full h-full'}>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <Tabs value={value}
                       onChange={handleChange} centered
@@ -25,12 +26,12 @@ export default function TabBar() {
                 </Tabs>
             </Box>
 
-            <TabPanel value={value} index={0}>
-                Item One
+            <TabPanel value={value} index={0} >
+                <CardSlider />
             </TabPanel>
             <TabPanel value={value} index={1}>
                 Item Two
             </TabPanel>
-        </>
+        </div>
     )
 }
