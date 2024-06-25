@@ -19,7 +19,6 @@ export default function TabBar({children}: { children: React.ReactNode }) {
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <Tabs value={value}
                       onChange={handleChange} centered
-                      textColor="black"
                       indicatorColor="secondary">
                     <Tab label="Following" />
                     <Tab label="For You" />
