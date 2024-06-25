@@ -1,14 +1,13 @@
 export interface FeedsInterface {
-    stories: StoriesInterface;
-    posts: PostsInterface;
+    stories: StoryInterface[];
+    posts: PostInterface[];
 }
-
-export interface StoriesInterface {
+export interface StoryInterface {
     id: string;
     image: string;
     addStory: () => void
 }
-export interface PostsInterface {
+export interface PostInterface {
     id: number;
     image: string;
     desc: string;

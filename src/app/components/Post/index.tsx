@@ -1,5 +1,5 @@
 import Avatar from "@mui/material/Avatar";
-import {PostsInterface} from "@/store/Feeds/interface";
+import {PostInterface} from "@/store/Feeds/interface";
 import CheckBoxOutlineBlankOutlinedIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import ShowChartOutlinedIcon from '@mui/icons-material/ShowChartOutlined';
@@ -9,7 +9,7 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import {useState} from "react";
 import Image from "next/image";
 
-export default function Post({post}: PostsInterface) {
+export default function Post({...post}: PostInterface) {
 
     const [liked, setLiked] = useState<boolean>(false)
     return (

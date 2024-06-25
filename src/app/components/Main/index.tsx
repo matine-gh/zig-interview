@@ -5,14 +5,14 @@ import StoryList from "@/app/components/StoryList";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {getFeedsLoading} from "@/store/Feeds/action";
-import {PostsInterface, StoriesInterface} from "@/store/Feeds/interface";
+import {PostInterface, StoryInterface} from "@/store/Feeds/interface";
 import TabBar from "@/app/components/TabBar";
 import PostList from "@/app/components/PostList";
 
 export default function Main() {
 
-    const [storyList, setStoryList] = useState<StoriesInterface>();
-    const [postList, setPostList] = useState<PostsInterface>();
+    const [storyList, setStoryList] = useState<StoryInterface[]>();
+    const [postList, setPostList] = useState<PostInterface[]>();
 
     const dispatch = useDispatch();
     const feedsStates = useSelector((state: any)=>state.feeds.response);

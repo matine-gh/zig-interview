@@ -1,10 +1,10 @@
-import {StoriesInterface} from "@/store/Feeds/interface";
+import {StoryInterface} from "@/store/Feeds/interface";
 import Avatar from '@mui/material/Avatar';
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import Badge from "@mui/material/Badge";
 import * as React from "react";
 
-export default function Story({image, id, addStory}: StoriesInterface) {
+export default function Story({image, id, addStory}: StoryInterface) {
 
     return (
         <div className={'flex-1'}>

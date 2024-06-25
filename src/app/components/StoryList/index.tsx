@@ -1,10 +1,10 @@
 
-import {StoriesInterface} from "@/store/Feeds/interface";
+import {StoryInterface} from "@/store/Feeds/interface";
 import Story from "@/app/components/Story";
 import GeneralModal from "@/app/components/common/GeneralModal";
 import * as React from "react";
 
-export default function StoryList({storyList}: StoriesInterface[]) {
+export default function StoryList({...storyList}: StoryInterface[]) {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
