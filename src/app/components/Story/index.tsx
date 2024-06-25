@@ -18,7 +18,7 @@ export default function Story({image, id, addStory}: StoryInterface) {
                         }
                         onClick={addStory}
                         className={'p-1'}>
-                        <Avatar  color="primary" variant="outlined" alt={id} src={image} className={'m-auto'} sx={{ width: 56, height: 56 }}/>
+                        <Avatar  color="primary" alt={id} src={image} className={'m-auto'} sx={{ width: 56, height: 56 }}/>
                     </Badge>
                     :<div className={'bg-gradient-to-r from-cyan-200 to-blue-500 p-1 rounded-full'}>
                         <Avatar alt={id} src={image} className={'m-auto'} sx={{ width: 56, height: 56 }}/>
