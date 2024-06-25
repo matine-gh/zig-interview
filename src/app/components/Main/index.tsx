@@ -22,7 +22,9 @@ export default function Main() {
     }, []);
 
     useEffect(() => {
-        setStoryList(feedsStates.stories)
+        if (feedsStates.stories){
+            setStoryList(feedsStates.stories)
+        }
     }, [feedsStates.stories]);
 
     useEffect(() => {
@@ -33,9 +35,9 @@ export default function Main() {
 
     return (
         <div className={'flex-1'}>
-            <StoryList storyList={storyList}/>
+            {storyList && <StoryList {...storyList}/>}
             <TabBar>
-                {postList && <PostList postList={postList}/>}
+                {postList && <PostList {...postList}/>}
             </TabBar>
         </div>
     )
