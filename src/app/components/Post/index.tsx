@@ -30,7 +30,7 @@ export default function Post({...post}: PostInterface) {
                 <div className={'flex justify-between gap-5 text-xs'}>
                     <div onClick={()=>setLiked(!liked)}>
                         <ShowChartOutlinedIcon sx={{ color: liked? '#00C400':'#ADADAD', padding: 0 }} fontSize="small" />
-                        <span className={`${liked? 'text-success': 'text-secondary'} text-xs`}>{post.impression.like + liked}</span>
+                        <span className={`${liked? 'text-success': 'text-secondary'} text-xs`}>{post.impression.like + Number(liked)}</span>
                     </div>
                     <div>
                         <MessageOutlinedIcon sx={{ color: '#ADADAD' }} fontSize="small"/>
