@@ -4,7 +4,7 @@ import Modal from "@mui/material/Modal";
 import * as React from "react";
 import {GeneralModalInterface} from "@/app/components/common/GeneralModal/generalModal.interface";
 
-export default function GeneralModal({handleClose, open, children}: {GeneralModalInterface}) {
+export default function GeneralModal({handleClose, open, children}: GeneralModalInterface) {
 
     const style = {
         position: 'absolute' as 'absolute',
