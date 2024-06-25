@@ -15,8 +15,8 @@ export default function StoryList({...storyList}: StoryInterface[]) {
             <div className={'flex justify-between p-5 gap-4 overflow-x-scroll'}>
                 <Story id={'my story'} image={''} addStory={handleOpen}/>
                 <>
-                    {storyList.map((story, index) => (
-                        <Story key={index} id={story.id} image={story.image}  addStory={()=>setOpen(false)}/>
+                    {storyList && Object.keys(storyList).map( index => (
+                        <Story key={index} id={storyList[index].id} image={storyList[index].image}  addStory={()=>setOpen(false)}/>
                     ))}
                 </>
             </div>

@@ -5,9 +5,9 @@ import Post from "../Post/index"
 export default function PostList({...postList}: PostInterface[]) {
     return (
         <div>{
-            postList.map(post => (
-                <div key={post.id}>
-                    <Post {...post}/>
+            postList && Object.keys(postList).map(id => (
+                <div key={id}>
+                    <Post {...postList[id]}/>
                 </div>
             ))
         }</div>
